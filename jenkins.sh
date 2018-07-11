@@ -57,6 +57,13 @@ docker run --rm \
 	$BUILD_IMAGE \
 	bash -c "npm run validate"
 
+echo "[release] [Semantic release]: Analysis of 2 commits complete: no release"
+echo "[release] [Semantic release]: HACKER TIME!"
+echo "[release] [Semantic release]: NPM_VERSION == ${NPM_VERSION}"
+echo "[release] [Semantic release]: BUILD_DIR == ${BUILD_DIR}"
+echo "[release] [Semantic release]: BUILD_IMAGE == ${BUILD_IMAGE}"
+echo "[release] [Semantic release]: APP_DIR == ${APP_DIR}"
+
 docker run --rm \
 	${DOCKER_ARGS[*]} \
 	${DOCKER_UPLOAD_ARGS[*]} \
@@ -67,3 +74,5 @@ docker run --rm \
 if [ -f  coverage/lcov.info ]; then
 	sed -i "s|SF:${APP_DIR}|SF:${BUILD_DIR}/|g" coverage/lcov.info
 fi
+
+
