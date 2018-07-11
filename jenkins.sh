@@ -9,6 +9,12 @@ NPM_VERSION=${NPM_VERSION:-$(jq ".engines.npm // 6" package.json)}
 # release env:
 NPM_UPLOAD_TOKEN=${NPM_UPLOAD_TOKEN:-''}
 
+echo "[release] [Semantic release]: HACKER TIME!"
+echo "[release] [Semantic release]: NPM_VERSION == ${NPM_VERSION}"
+echo "[release] [Semantic release]: BUILD_DIR == ${BUILD_DIR}"
+echo "[release] [Semantic release]: BUILD_IMAGE == ${BUILD_IMAGE}"
+echo "[release] [Semantic release]: APP_DIR == ${APP_DIR}"
+
 # PR branch is more correct than PR-xxx
 GIT_BRANCH=${CHANGE_BRANCH:-$GIT_BRANCH}
 GIT_BRANCH=${GIT_BRANCH#origin/};
