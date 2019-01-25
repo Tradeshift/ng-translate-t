@@ -35,7 +35,7 @@ from the [attributes](#api).
 ## Installation
 Install via npm
 ```
-npm i ng-translate-t
+npm i @tradeshift/ng-translate-t
 ```
 
 ## Usage
